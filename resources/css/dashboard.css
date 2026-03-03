@@ -1,0 +1,77 @@
+:root {
+    --primary: #9bad50;
+    --secondary: #b6cfe4;
+    --dark-text: #393027;
+    --light-bg: #f8fafc;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+
+a {
+    color: inherit;
+}
+
+.dashboard-app {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--light-bg);
+}
+
+.dashboard-main {
+    margin-left: 250px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-content {
+    padding: 1.4rem 1.6rem 2rem;
+}
+
+.page-header {
+    margin-bottom: 1rem;
+}
+
+.page-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.page-description {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 0.2rem;
+}
+
+@media (max-width: 900px) {
+    .dashboard-main {
+        margin-left: 0;
+    }
+
+    .dashboard-content {
+        padding-inline: 1.1rem;
+    }
+}
+
+@import './components/sidebar.css';
+@import './components/navbar.css';
+@import './components/cards.css';
+@import './components/tables.css';
+

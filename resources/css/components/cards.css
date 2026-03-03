@@ -1,0 +1,119 @@
+:root {
+    --primary: #9bad50;
+    --secondary: #b6cfe4;
+    --dark-text: #393027;
+    --light-bg: #f8fafc;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 0.9rem;
+    border: 1px solid #e2e8f0;
+    padding: 1.25rem 1.4rem;
+}
+
+.card + .card {
+    margin-top: 1.25rem;
+}
+
+.card-header {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.card-body {
+    font-size: 0.95rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.9rem 1.75rem;
+}
+
+.info-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin-bottom: 0.2rem;
+}
+
+.info-value {
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+.muted-text {
+    font-size: 0.86rem;
+    color: #6b7280;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+    gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+    .detail-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 0.9rem;
+    border: 1px solid #e2e8f0;
+    padding: 0;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.stat-card-bar {
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.stat-card-body {
+    padding: 1.1rem 1.25rem 1.2rem;
+}
+
+.stat-card-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #6b7280;
+    margin-bottom: 0.4rem;
+}
+
+.stat-card-value {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+.summary-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #6b7280;
+}
+
+.summary-value {
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-left: 0.4rem;
+}
+
