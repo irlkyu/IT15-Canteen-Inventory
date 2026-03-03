@@ -37,6 +37,7 @@ class ProductController extends Controller
             'product_code' => ['required', 'string', 'max:255'],
             'product_name' => ['required', 'string', 'max:255'],
             'price' => ['required', 'numeric', 'min:0'],
+            'current_stock' => ['required', 'integer', 'min:0'],
         ]);
 
         $product->update($validated);
@@ -54,7 +55,9 @@ class ProductController extends Controller
             'price' => ['required', 'numeric', 'min:0'],
         ]);
 
-        $product = Product::create($validated + ['current_stock' => 0]);
+        $initialStock = rand(3, 10);
+
+        $product = Product::create($validated + ['current_stock' => $initialStock]);
 
         return redirect()
             ->route('products.show', $product)

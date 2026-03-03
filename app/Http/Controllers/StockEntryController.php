@@ -13,13 +13,16 @@ class StockEntryController extends Controller
     {
         $products = Product::orderBy('product_name')->get();
         $suppliers = Supplier::orderBy('supplier_name')->get();
+        $entries = StockEntry::with(['product', 'supplier'])
+            ->latest()
+            ->limit(20)
+            ->get();
 
-        return view('stock_entries.create', compact('products', 'suppliers'));
+        return view('stock_entries.create', compact('products', 'suppliers', 'entries'));
     }
 
     public function store(Request $request)
     {
-        // Reuse existing business logic on the model
         (new StockEntry())->store($request);
 
         return redirect()

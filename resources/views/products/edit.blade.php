@@ -41,6 +41,16 @@
                        required>
             </div>
 
+            <div class="space-y-1.5">
+                <label for="current_stock" class="block text-xs font-semibold tracking-wide text-slate-700 uppercase">
+                    Current Stock
+                </label>
+                <input type="number" min="0" id="current_stock" name="current_stock"
+                       value="{{ old('current_stock', $product->current_stock) }}"
+                       class="w-full rounded-md border-slate-300 text-sm focus:border-[var(--color-primary)] focus:ring-[var(--color-primary)]"
+                       required>
+            </div>
+
             <div class="flex items-center justify-end gap-2 pt-2">
                 <a href="{{ route('products.show', $product) }}"
                    class="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50">

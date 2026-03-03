@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
                 'product_code'   => $data['code'],
                 'product_name'   => $data['name'],
                 'price'          => $data['price'],
-                'current_stock'  => 0,
+                'current_stock'  => rand(3, 10),
             ]);
         }
     }

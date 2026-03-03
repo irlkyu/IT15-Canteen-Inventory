@@ -42,7 +42,7 @@
                 <a href="{{ route('stock-entries.create') }}"
                    class="flex items-center gap-2 px-3 py-2 rounded-md transition
                    {{ request()->routeIs('stock-entries.*') ? 'bg-[var(--color-primary)] text-white' : 'text-gray-200 hover:bg-white/10' }}">
-                    <span>Add Stock Entry</span>
+                    <span>Stock Entry</span>
                 </a>
             </nav>
         </aside>
